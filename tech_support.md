@@ -28,11 +28,11 @@ There has been a lot written about how to set up a Python environment, so we won
 
 ## Environments and Package Managers
 
-For this class, the software you'll need includes Python 3.12, a few specific Python packages, Git, and a text editor.
+For this class, the software you'll need includes Python 3.13, a few specific Python packages, Git, and a text editor.
 
 Gradescope has an **environment** which it uses to autograde your work. You can think of an environment as a combination of a Python version and _specific_ versions of Python packages that is isolated from the rest of your computer. In practice, developers create different environments for different projects, so that they can use different versions of packages in different projects.
 
-We're going to have you replicate the environment Gradescope has on your computer. The reason for this is so that your code behaves the same when you submit it to Gradescope as it does when you work on it on your computer. For example, our Gradescope environment uses `numpy` version `1.21.2`; if you install a different version of `numpy` on your computer, for example, you might see different results than Gradescope sees.
+We're going to have you replicate the environment Gradescope has on your computer. The reason for this is so that your code behaves the same when you submit it to Gradescope as it does when you work on it on your computer. For example, our Gradescope environment uses `numpy` version `2.1.1`; if you install a different version of `numpy` on your computer, for example, you might see different results than Gradescope sees.
 
 How do you install packages, then? `pip` is a common choice, but even though it's widely used, it lacks built-in support for creating isolated environments. This limitation makes it challenging to maintain version consistency and avoid conflicts between packages. **Consequently, we do not recommend relying solely on `pip install` for environment management**, as it may inadvertently introduce incompatible package versions.
 
