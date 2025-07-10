@@ -6,13 +6,16 @@ nav_order: 4
 ---
 
 # 🙋‍♂️ Tech Support
+
 {:.no_toc}
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+   {:toc}
+
 ---
 
 ## Introduction
@@ -21,13 +24,9 @@ In DSC 10, you worked on assignments on DataHub, a computing platform that alrea
 
 There has been a lot written about how to set up a Python environment, so we won't reinvent the wheel. This page will only be a summary; Google will be your main resource. But always feel free to come to a staff member's office hours if you have a question about setting up your environment, using Git, or similar — we're here to help.
 
----
+<!-- [This video](https://www.loom.com/share/0ea254b85b2745e59322b5e5a8692e91?sid=b77c5c2d-0c24-40fb-8cfc-8574d49d9019) walks through most of the steps here, but it's **not** a substitute for reading this page carefully.
 
-[This video](https://www.loom.com/share/0ea254b85b2745e59322b5e5a8692e91?sid=b77c5c2d-0c24-40fb-8cfc-8574d49d9019) walks through most of the steps here, but it's **not** a substitute for reading this page carefully.
-
-<div style="position: relative; padding-bottom: 64.92335437330928%; height: 0;"><iframe src="https://www.loom.com/embed/0ea254b85b2745e59322b5e5a8692e91?sid=96bb8188-9783-4878-bc1a-5f6946b20a61" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
----
+<div style="position: relative; padding-bottom: 64.92335437330928%; height: 0;"><iframe src="https://www.loom.com/embed/0ea254b85b2745e59322b5e5a8692e91?sid=96bb8188-9783-4878-bc1a-5f6946b20a61" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div> -->
 
 ## Environments and Package Managers
 
@@ -39,9 +38,9 @@ We're going to have you replicate the environment Gradescope has on your compute
 
 How do you install packages, then? `pip` is a common choice, but even though it's widely used, it lacks built-in support for creating isolated environments. This limitation makes it challenging to maintain version consistency and avoid conflicts between packages. **Consequently, we do not recommend relying solely on `pip install` for environment management**, as it may inadvertently introduce incompatible package versions.
 
-`conda`, on the other hand, is a powerful tool that not only installs packages but also manages environments effortlessly. It allows you to create isolated environments and ensures compatibility among the packages within those environments.
+[`uv`][uv], on the other hand, is a powerful tool that not only installs packages but also manages environments effortlessly. It allows you to create isolated environments and ensures compatibility among the packages within those environments.
 
-**The tool we're going to use, though, is `mamba`, which is a wrapper around `conda` that is designed to be much faster.** If you should need to install a new Python package, you can use the `mamba` command (once you have `mamba` installed). Inside the Terminal, type `mamba install <package_name>`, where `<package_name>` is replaced by the name of the package you want to install, and hit enter. **However, you should only run `mamba install` once you've entered your `dsc80` environment** – more on this below.
+[uv]: https://docs.astral.sh/uv/
 
 ---
 
@@ -49,88 +48,89 @@ How do you install packages, then? `pip` is a common choice, but even though it'
 
 Below, we're going to walk you through how to create the same environment that Gradescope uses.
 
-### Step 1: Install `mamba`
-    
+### Step 1: Install `uv`
+
 The way to do this depends on whether you're on a Unix-like platform (macOS or Linux) or on Windows.
 
 **Unix-like platforms (macOS or Linux)**:
 
-1. Download the `mamba` installer. To do this, open your Terminal and run:
+Run the `uv` installer. To do this, open your Terminal and run:
 
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
-    ```
-    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-    ```
+After this step, check that `uv` is available by running the `uv` command:
 
-    This will place a file named something like `Miniforge3-Darwin-arm64.sh` wherever you ran the command. If you get an error saying `command not found: curl`, replace `curl -L -O` with `wget` and re-run the same command.
+```
+$ uv
+An extremely fast Python package manager.
 
-2. Run the installer. To do this, immediately after the last command, run:
+Usage: uv [OPTIONS] <COMMAND>
 
-    ```
-    bash Miniforge3-$(uname)-$(uname -m).sh
-    ```
+...
+```
 
-<!-- or 
-
-`wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-bash Miniforge3-$(uname)-$(uname -m).sh` -->
+You should see a help menu listing the available commands.
 
 **Windows**:
 
-1. Download the Windows install script from [here](https://github.com/conda-forge/miniforge#miniforge) under "Miniforge3." The file should be named `Miniforge3-Windows-x86_64.exe` or similar.
-2. Run the downloaded `.exe` file. Follow the prompts, taking note of the options to "Create start menu shortcuts" and "Add Miniforge3 to my PATH environment variable". The latter is not selected by default due to potential conflicts with other software. Without Miniforge3 on the path, the most convenient way to use the installed software (such as commands `mamba`) will be via the "Miniforge Prompt" installed to the start menu.
-3. Run the following command in your Anaconda Prompt:
-    ```
-    start /wait "" Miniforge3-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniforge3
-    ```
-
-Make sure to run this command in the same folder that `Miniforge3-Windows-x64_64.exe` is! If that's not the folder that your command line interface is looking in, you'll need to `cd` there first, e.g. `cd C:\Users\surajrampure\Desktop` if that file is on your Desktop.
-
-### Step 2: Download [`environment.yml`](https://github.com/dsc-courses/dsc80-2024-fa/blob/gh-pages/resources/environment.yml)
-
-[This file](https://github.com/dsc-courses/dsc80-2024-fa/blob/gh-pages/resources/environment.yml) contains the necessary details to configure your environment. If you take a look at it, you'll see that it contains a specific Python version (`python=3.12`) along with specific package versions (like `pandas==2.2.3` and `requests==2.32.3`, for example).
-
-### Step 3: Create a new `conda` environment
-
-Yes, we said `conda` environment, even though we're using `mamba` to create it.
-
-To create the environment, in your Terminal or Anaconda Prompt, run:
+Run the `uv` installer. To do this, open PowerShell and run:
 
 ```
-mamba env create -f environment.yml
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-Note that if you put `environment.yml` in your Downloads or Desktop folder, you should replace `environment.yml` with the path to the file, for example: `mamba env create -f /Users/yourusername/Desktop/environment.yml`. Otherwise, you might get an error saying `environment.yml` does not exist.
-
-### Step 4: Activate the environment
-
-To do so, run:
+After this step, check that `uv` is available by running the `uv` command:
 
 ```
-mamba activate dsc80
+PS> uv
+An extremely fast Python package manager.
+
+Usage: uv [OPTIONS] <COMMAND>
+
+...
 ```
 
-_Where did the name `dsc80` come from, you might ask? We defined it for you at the top of `environment.yml` with `name: dsc80`._
+You should see a help menu listing the available commands.
 
-If you get an error saying `mamba` isn't defined, try closing and reopening your Terminal first and then rerunning the command.
+### Step 2: Download [`pyproject.toml`][toml]
+
+[toml]: https://github.com/dsc-courses/dsc259r-2026-wi/blob/main/pyproject.toml
+
+[This file][toml] contains the necessary details to configure your environment. If you take a look at it, you'll see that it contains a specific Python version (`python=3.13`) along with specific package versions (like `pandas==2.2.3` and `requests==2.32.3`, for example).
+
+Download the file, and then put it in the folder where you want to store your work.
+
+### Step 3: Create a new environment
+
+To create the environment, navigate to your folder, then in your Terminal, run:
+
+```
+uv sync
+```
+
+You should see that `uv` will download and install the packages we need for the course.
 
 ---
 
 ## Working on Assignments
 
-### Activating the `conda` environment
+The setup instructions above only need to be run once. But there's one more thing you need to do **every time you open a new terminal window**: activate the environment.
 
-The setup instructions above only need to be run once. Now, every time you work on DSC 80 assignments, all you need to do is run
+For macOS/Linux, run:
 
 ```
-mamba activate dsc80
+source .venv/bin/activate
 ```
 
-in your Terminal or Anaconda Prompt. If you need to install any packages into your `dsc80` environment using `mamba install`, make sure to activate the environment first.
+For Windows, run:
 
-If you’re using VSCode, you should select the Python kernel corresponding to the `dsc80` environment to use it.
+```
+.venv\Scripts\activate
+```
 
-To open a Jupyter Notebook, use the `jupyter notebook` command in your Terminal or Anaconda Prompt.
+Now, you can open Jupyter Lab, by using the `jupyter lab` command in your Terminal.
 
 ### Using Git
 
@@ -139,12 +139,11 @@ GitHub in [this Git repository](https://github.com/dsc-courses/dsc80-2024-fa). T
 [Git](https://git-scm.com/) in order to work with the course
 materials.
 
-Git is a *version control system*. In short, it is used to keep track of
+Git is a _version control system_. In short, it is used to keep track of
 the history of a project. With Git, you can go back in time to any
 previous version of your project, or even work on two different versions
 (or \"branches\") in parallel and \"merge\" them together at some point
-in the future. We\'ll stick to using the basic features of Git in DSC
-80.
+in the future. We\'ll stick to using the basic features of Git in DSC 80.
 
 There are Git GUIs, and you can use them for this class. You can also
 use the command-line version of Git. To get started, you\'ll need to
@@ -170,15 +169,14 @@ You might face issues when using `git pull` regarding merge issues and branches.
 NOTE: Whenever working with GitHub pulls, merges, etc., it's a good idea to save your important work locally so that if you accidentally overwrite your files you still have the work saved. **Save your work locally before following the steps below.**
 
 1. `git status` shows the current state of your Git working directory and staging area. It's a good sanity check to start with. You will probably see your project and lab files that you have worked on.
-2. `git add .`  will add all your files to be ready to commit.
-3. `git commit -m "some message of your choice"`  will commit the files, with some description in the quotations. This can be whatever you want, it won't matter.
+2. `git add .` will add all your files to be ready to commit.
+3. `git commit -m "some message of your choice"` will commit the files, with some description in the quotations. This can be whatever you want, it won't matter.
 
 At this stage, if you `git pull`, it should work. You should double-check that you have new files, as well as that your old files are unchanged. If they are changed then you should be able to just copy-paste from your local backup. If this does **not** work then you may have **merge conflicts**, follow the next steps:
 
-4. `git checkout --theirs [FILENAME]`  will tell git that whenever a conflict occurs in `[FILENAME]` to keep your version. Run this for each file with a conflict.
-5. `git add [FILENAME]` to mark each file with a conflict as resolved. 
-6. `git rebase --continue` or `git merge`, depending on the setup. 
-
+4. `git checkout --theirs [FILENAME]` will tell git that whenever a conflict occurs in `[FILENAME]` to keep your version. Run this for each file with a conflict.
+5. `git add [FILENAME]` to mark each file with a conflict as resolved.
+6. `git rebase --continue` or `git merge`, depending on the setup.
 
 ### Choosing a Text Editor or IDE
 
@@ -191,32 +189,32 @@ to ask the course staff.
 
 If you're curious, Suraj uses VSCode to edit .py files and the vanilla Jupyter environment to edit notebooks.
 
--   The [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) text
-    editor: see [below](#jupyterlab). Can be used to edit both notebooks and .py files.
+- The [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) text
+  editor: see [below](#jupyterlab). Can be used to edit both notebooks and .py files.
 
--   [VSCode](https://code.visualstudio.com/): Microsoft Visual Studio Code. Currently very popular, and can also be used to edit both notebooks and .py files.
+- [VSCode](https://code.visualstudio.com/): Microsoft Visual Studio Code. Currently very popular, and can also be used to edit both notebooks and .py files.
 
--   [sublime](https://www.sublimetext.com/): A favorite text editor of
-    hackers, famous for its multiple cursors. A good, general-purpose
-    choice.
+- [sublime](https://www.sublimetext.com/): A favorite text editor of
+  hackers, famous for its multiple cursors. A good, general-purpose
+  choice.
 
--   [atom](https://atom.io/): GitHub's editor. Pretty nice fully
-    featured IDE. Can only work locally.
+- [atom](https://atom.io/): GitHub's editor. Pretty nice fully
+  featured IDE. Can only work locally.
 
--   [PyCharm (IntelliJ)](https://www.jetbrains.com/pycharm/): Those who
-    feel at home coding Java. Can only work locally.
+- [PyCharm (IntelliJ)](https://www.jetbrains.com/pycharm/): Those who
+  feel at home coding Java. Can only work locally.
 
--   [nano](https://www.nano-editor.org/): available on most unix
-    commandlines (e.g. DataHub Terminal). If you use this for more than
-    changing a word or two, you\'ll hate your life.
+- [nano](https://www.nano-editor.org/): available on most unix
+  commandlines (e.g. DataHub Terminal). If you use this for more than
+  changing a word or two, you\'ll hate your life.
 
--   [(neo)vim](https://neovim.io/): lightweight, productive text-editor
-    that might be the most efficient way to edit text, if you can ever
-    learn how to use it. Justin Eldridge's text editor of choice.
+- [(neo)vim](https://neovim.io/): lightweight, productive text-editor
+  that might be the most efficient way to edit text, if you can ever
+  learn how to use it. Justin Eldridge's text editor of choice.
 
--   [emacs](https://www.gnu.org/software/emacs/): A text editor for
-    those who prefer a life of endless toil. Endlessly customizable, it
-    promises everything, but you're never good enough to deliver.
+- [emacs](https://www.gnu.org/software/emacs/): A text editor for
+  those who prefer a life of endless toil. Endlessly customizable, it
+  promises everything, but you're never good enough to deliver.
 
 ### Using VSCode to Run Jupyter Notebooks
 
@@ -224,11 +222,11 @@ Many students like to use VSCode to edit Jupyter Notebooks. If that's you, then 
 
 1. Open a Juypter Notebook in VSCode.
 1. Click "Select Kernel" in the top right corner of the window.
-    <center><img src="../assets/images/ts-select-kernel.png" width=150></center>
+<center><img src="../assets/images/ts-select-kernel.png" width=150></center>
 1. Click "Python Environments" in the toolbar that appears in the middle.
-    <center><img src="../assets/images/ts-python-environments.png" width=300></center>
-1. Finally, click "dsc80 (Python 3.12.6)".
-    <center><img src="../assets/images/ts-dsc80-conda.png" width=500></center>
+<center><img src="../assets/images/ts-python-environments.png" width=300></center>
+1. Finally, click ".venv (Python 3.13.2)".
+<!-- <center><img src="../assets/images/ts-dsc80-conda.png" width=500></center> -->
 
 <!-- ## Working Remotely via DataHub
 
