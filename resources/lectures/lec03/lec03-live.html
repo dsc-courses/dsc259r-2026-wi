@@ -7523,6 +7523,24 @@ a.anchor-link {
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ae0ee6a8-d0de-445c-b6ba-063e7c7311ee">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">show_paradox_slides</span><span class="p">():</span>
+    <span class="n">src</span> <span class="o">=</span> <span class="s1">'https://docs.google.com/presentation/d/e/2PACX-1vSbFSaxaYZ0NcgrgqZLvjhkjX-5MQzAITWAsEFZHnix3j1c0qN8Vd1rogTAQP7F7Nf5r-JWExnGey7h/embed?start=false&amp;rm=minimal'</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="mi">960</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">569</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8c8a44b8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7546,26 +7564,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Lecture-3-%E2%80%93-Aggregating">Lecture 3 – Aggregating<a class="anchor-link" href="#Lecture-3-%E2%80%93-Aggregating">¶</a></h1>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3e7a92cd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Agenda">Agenda<a class="anchor-link" href="#Agenda">¶</a></h3><ul>
-<li>Adding and modifying columns</li>
-<li>Data granularity and the <code>groupby</code> method.</li>
-<li><code>DataFrameGroupBy</code> objects and aggregation.</li>
-<li>Other <code>DataFrameGroupBy</code> methods.</li>
-<li>Pivot tables using the <code>pivot_table</code> method.</li>
-</ul>
-<p>You will need to code <strong>a lot</strong> today – make sure to pull the <a href="https://github.com/dsc-courses/dsc80-2024-wi">course repository</a></p>
-<p>I will code a lot too, and the filled-in slides are posted online.</p>
+<h1 id="Lecture-3-%E2%80%93-Aggregating,-Simpsons-Paradox">Lecture 3 – Aggregating, Simpsons Paradox<a class="anchor-link" href="#Lecture-3-%E2%80%93-Aggregating,-Simpsons-Paradox">¶</a></h1>
 </div>
 </div>
 </div>
@@ -8617,6 +8616,459 @@ P(\text{species} = c \mid \text{sex} = x) &amp;= \frac{P(\text{species} = c \tex
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your code goes here.</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d8ac2eaa-d278-48ba-a414-6eb0f4bfe61e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=aeeb3e11-b7db-4d6d-bd42-80a13edaabff">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c4f078b-e3f0-4810-9871-f0c2147902a4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Simpson's-paradox">Simpson's paradox<a class="anchor-link" href="#Simpson's-paradox">¶</a></h2><br/>
+<center><img alt="No description has been provided for this image" src="imgs/simpsons.png" width="50%"/></center>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3d020da0-126e-48b8-970d-2078f19a2d2e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Example:-Grades">Example: Grades<a class="anchor-link" href="#Example:-Grades">¶</a></h3><ul>
+<li><p>Two students, Lisa and Bart, just finished their first year at UCSD. They both took a different number of classes in Fall, Winter, and Spring.</p>
+</li>
+<li><p>Each quarter, Lisa had a higher GPA than Bart.</p>
+</li>
+<li><p>But Bart has a higher overall GPA.</p>
+</li>
+<li><p>How is this possible? 🤔</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2577a0b0-e1b8-423d-94fe-210f5d8c5bdc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Run this cell to create DataFrames that contain each students' grades.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f859a42e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">lisa</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">46</span><span class="p">],</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">54</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">]],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Units'</span><span class="p">,</span> <span class="s1">'Grade Points Earned'</span><span class="p">],</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'Fall'</span><span class="p">,</span> <span class="s1">'Winter'</span><span class="p">,</span> <span class="s1">'Spring'</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">lisa</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Lisa'</span> <span class="c1"># This allows us to see the name "Lisa" in the top left of the DataFrame.</span>
+
+<span class="n">bart</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mf">13.5</span><span class="p">],</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mf">81.4</span><span class="p">]],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Units'</span><span class="p">,</span> <span class="s1">'Grade Points Earned'</span><span class="p">],</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'Fall'</span><span class="p">,</span> <span class="s1">'Winter'</span><span class="p">,</span> <span class="s1">'Spring'</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">bart</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Bart'</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cfdb73c9-7ec7-4dac-9713-b9b5ded9a410">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Quarter-specific-vs.-overall-GPAs">Quarter-specific vs. overall GPAs<a class="anchor-link" href="#Quarter-specific-vs.-overall-GPAs">¶</a></h3><p><strong>Note</strong>: The number of "grade points" earned for a course is</p>
+$$\text{number of units} \cdot \text{grade (out of 4)}$$<p>For instance, an A- in a 4 unit course earns $3.7 \cdot 4 = 14.8$ grade points.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=86c712d5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfs_side_by_side</span><span class="p">(</span><span class="n">lisa</span><span class="p">,</span> <span class="n">bart</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1b748722-867a-441c-b83e-6448bb2f9ac1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Lisa had a higher GPA in all three quarters.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f4e9fd96">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">quarterly_gpas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">"Lisa's Quarter GPA"</span><span class="p">:</span> <span class="n">lisa</span><span class="p">[</span><span class="s1">'Grade Points Earned'</span><span class="p">]</span> <span class="o">/</span> <span class="n">lisa</span><span class="p">[</span><span class="s1">'Units'</span><span class="p">],</span>
+    <span class="s2">"Bart's Quarter GPA"</span><span class="p">:</span> <span class="n">bart</span><span class="p">[</span><span class="s1">'Grade Points Earned'</span><span class="p">]</span> <span class="o">/</span> <span class="n">bart</span><span class="p">[</span><span class="s1">'Units'</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">quarterly_gpas</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=62002a2d-e867-4f72-b21c-8422e8ddf722">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="alert alert-warning">
+<h3>Question 🤔 (Answer at <a href="https://dsc80.com/q">dsc80.com/q</a>)</h3>
+</div>
+<p>Use the DataFrame <code>lisa</code> to compute Lisa's overall GPA, and use the DataFrame <code>bart</code> to compute Bart's overall GPA.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=abe9ff14">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Helper function to show lisa and bart side-by-side to save screen space</span>
+<span class="n">dfs_side_by_side</span><span class="p">(</span><span class="n">lisa</span><span class="p">,</span> <span class="n">bart</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2a2973aa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your code goes here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=93d77a68-7f7a-4794-a38b-a834bbc5e852">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="What-happened?">What happened?<a class="anchor-link" href="#What-happened?">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c1296389">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">quarterly_gpas</span>
+ <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Lisa_Units</span><span class="o">=</span><span class="n">lisa</span><span class="p">[</span><span class="s1">'Units'</span><span class="p">],</span>
+         <span class="n">Bart_Units</span><span class="o">=</span><span class="n">bart</span><span class="p">[</span><span class="s1">'Units'</span><span class="p">])</span>
+ <span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c3be44af-dfb4-4d36-9c79-e4669c055c31">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><p>When Lisa and Bart both performed poorly, Lisa took more units than Bart. <strong>This brought down 📉 Lisa's overall average.</strong></p>
+</li>
+<li><p>When Lisa and Bart both performed well, Bart took more units than Lisa. <strong>This brought up 📈 Bart's overall average.</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0dad520d-29a8-4d41-b028-1fe0032dd976">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Simpson's-paradox">Simpson's paradox<a class="anchor-link" href="#Simpson's-paradox">¶</a></h3><ul>
+<li><p>Simpson's paradox occurs when <strong>grouped data and ungrouped data show opposing trends</strong>.</p>
+<ul>
+<li>It is named after Edward H. Simpson, not Lisa or Bart Simpson.</li>
+</ul>
+</li>
+<li><p>It often happens because there is a hidden factor (i.e. a <strong>confounder</strong>) within the data that influences results.</p>
+</li>
+<li><p><strong>Question</strong>: What is the "correct" way to summarize your data? What if you had to act on these results?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e79b9b10-982d-4842-b341-34ac4fc947a7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Example:-How-Berkeley-was-almost-sued-for-gender-discrimination-(1973)">Example: How Berkeley was <em>almost</em> sued for gender discrimination (1973)<a class="anchor-link" href="#Example:-How-Berkeley-was-almost-sued-for-gender-discrimination-(1973)">¶</a></h3><p>What do you notice?</p>
+<center><img alt="No description has been provided for this image" src="imgs/berkeley.png" width="70%"/></center>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d0da5b55">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">show_paradox_slides</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e71d3854-03e9-4e9a-af97-6e718c3178ed">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="What-happened?">What happened?<a class="anchor-link" href="#What-happened?">¶</a></h3><ul>
+<li><p>The overall acceptance rate for women (30%) was lower than it was for men (45%).</p>
+</li>
+<li><p>However, most departments (A, B, D, F) had a higher acceptance rate for women.</p>
+</li>
+<li><p>Department A had a 62% acceptance rate for men and an 82% acceptance rate for women!</p>
+<ul>
+<li>31% of men applied to Department A.</li>
+<li>6% of women applied to Department A.</li>
+</ul>
+</li>
+<li><p>Department F had a 6% acceptance rate for men and a 7% acceptance rate for women!</p>
+<ul>
+<li>14% of men applied to Department F.</li>
+<li>19% of women applied to Department F.</li>
+</ul>
+</li>
+<li><p><strong>Conclusion</strong>: Women tended to apply to departments with a lower acceptance rate; the data don't support the hypothesis that there was major gender discrimination against women.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8231580-0b2f-47c4-9f76-27cd17cdeab3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Example:-Restaurant-reviews-and-phone-types">Example: Restaurant reviews and phone types<a class="anchor-link" href="#Example:-Restaurant-reviews-and-phone-types">¶</a></h3><ul>
+<li><p>You are deciding whether to eat at Dirty Birds or The Loft.</p>
+</li>
+<li><p>Suppose Yelp shows ratings aggregated by phone type (Android vs. iPhone).</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Phone Type</th>
+<th>Stars for Dirty Birds</th>
+<th>Stars for The Loft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>4.24</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>iPhone</td>
+<td>2.99</td>
+<td>2.79</td>
+</tr>
+<tr>
+<td><strong>All</strong></td>
+<td><strong>3.32</strong></td>
+<td><strong>3.37</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>Question</strong>: Should you choose Dirty Birds or The Loft?</p>
+</li>
+<li><p><strong>Answer</strong>: The type of phone you use likely has nothing to do with your taste in food – pick the restaurant that is rated higher overall.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=08f5c961-91b9-4df8-ae03-ee4f484b4cd6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Rule-of-thumb-%F0%9F%91%8D">Rule of thumb 👍<a class="anchor-link" href="#Rule-of-thumb-%F0%9F%91%8D">¶</a></h3><ul>
+<li><p>Let $(X, Y)$ be a pair of variables of interest. Simpson's paradox occurs when the association between $X$ and $Y$ reverses when we condition on $Z$, a third variable.</p>
+</li>
+<li><p>If $Z$ has a <strong>causal</strong> connection to both $X$ and $Y$, we should condition on $Z$ and use deaggregated data.</p>
+</li>
+<li><p>If not, we shouldn't condition on $Z$ and use the aggregated data instead.</p>
+</li>
+<li><p>Berkeley gender discrimination: $X$ is gender, $Y$ is acceptance rate. $Z$ is the department.</p>
+<ul>
+<li>$Z$ has a plausible causal effect on both $X$ and $Y$, so we should condition on $Z$.</li>
+</ul>
+</li>
+<li><p>Yelp ratings: $X$ is the restaurant, $Y$ is the average stars. $Z$ is the phone type.</p>
+<ul>
+<li>$Z$ doesn't plausibly cause $X$ to change, so we should not condition on $Z$.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb17ea0d-76c7-4c71-b3d0-03d89bbb887b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Takeaways">Takeaways<a class="anchor-link" href="#Takeaways">¶</a></h3><p>Be skeptical of...</p>
+<ul>
+<li>Aggregate statistics.</li>
+<li>People misusing statistics to "prove" that discrimination doesn't exist.</li>
+<li>Drawing conclusions from individual publications ($p$-hacking, publication bias, narrow focus, etc.).</li>
+<li>Everything!</li>
+</ul>
+<p><strong>We need to apply domain knowledge and human judgement calls to decide what to do when Simpson's paradox is present.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7fe6acdf-82de-4eb6-b917-514ad5ff9ca1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Really?">Really?<a class="anchor-link" href="#Really?">¶</a></h3><p>To handle Simpson's paradox with rigor, we need some ideas from causal inference which we don't have time to cover in DSC 80. This video has a good example of how to approach Simpson's paradox using a minimal amount of causal inference, if you're curious (not required for DSC 80).</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ecce9e2a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">'https://www.youtube-nocookie.com/embed/zeuW1Z2EtLs?si=l2Dl7P-5RCq3ODpo'</span><span class="p">,</span>
+       <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2e77cfe8-f4e0-484d-99b1-0d158781338d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Further-reading">Further reading<a class="anchor-link" href="#Further-reading">¶</a></h3><ul>
+<li><a href="https://statisticsbyjim.com/basics/simpsons-paradox/">What is Simpson's Paradox?</a></li>
+<li><a href="https://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf">Understanding Simpson's Paradox</a><ul>
+<li>Requires more statistics background, but gives a rigorous understanding of when to use aggregated vs. unaggregated data.</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
