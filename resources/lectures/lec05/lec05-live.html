@@ -7514,52 +7514,29 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dsc80_utils</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dsc80_utils</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5eebbfda-0784-4acf-a0cb-90120b920240">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5eebbfda-0784-4acf-a0cb-90120b920240">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Pandas Tutor setup</span>
 <span class="o">%</span><span class="k">reload_ext</span> pandas_tutor
 <span class="o">%</span><span class="k">set_pandas_tutor_options</span> {"maxDisplayCols": 8, "nohover": True, "projectorMode": True}
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<script src="https://pandastutor.com/build/wsembed.bundle.2022-07-07-release.js" type="text/javascript"></script>
-<script>
-console.log("initializing pandas_tutor js")
-
-function drawWsv(viz_id, spec, options) {
-  if (typeof createWsvFromPandasTrace === 'undefined') {
-    setTimeout(() => drawWsv(viz_id, spec, options), 2000) // retry in 2 seconds
-    return
-  }
-  createWsvFromPandasTrace(viz_id, spec, options)
-}
-</script>
 </div>
 </div>
 </div>
@@ -7571,948 +7548,7 @@ function drawWsv(viz_id, spec, options) {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Lecture-5-%E2%80%93-Exploratory-Data-Analysis-and-Data-Cleaning">Lecture 5 – Exploratory Data Analysis and Data Cleaning<a class="anchor-link" href="#Lecture-5-%E2%80%93-Exploratory-Data-Analysis-and-Data-Cleaning">¶</a></h1><h2 id="DSC-80,-Fall-2024">DSC 80, Fall 2024<a class="anchor-link" href="#DSC-80,-Fall-2024">¶</a></h2><h1 id="Sam-went-to-the-bathroom,-will-be-back-soon.">Sam went to the bathroom, will be back soon.<a class="anchor-link" href="#Sam-went-to-the-bathroom,-will-be-back-soon.">¶</a></h1>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=22824200">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Announcements-%F0%9F%93%A3">Announcements 📣<a class="anchor-link" href="#Announcements-%F0%9F%93%A3">¶</a></h3><ul>
-<li>Lab 2 due tomorrow, <strong>Fri, Oct 11</strong>.</li>
-<li>Project 1 is due this <strong>Tue, Oct 15</strong>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bd851d5b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Agenda-%F0%9F%93%86">Agenda 📆<a class="anchor-link" href="#Agenda-%F0%9F%93%86">¶</a></h3><ul>
-<li>Dataset overview.</li>
-<li>Introduction to <code>plotly</code>.</li>
-<li>Exploratory data analysis and feature types.</li>
-<li>Data cleaning.<ul>
-<li>Data quality checks.</li>
-<li>Missing values.</li>
-<li>Transformations and timestamps.</li>
-<li>Modifying structure.</li>
-</ul>
-</li>
-<li>Investigating student-submitted questions!</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=61e6b334-131a-4bd3-a3da-637d702ebf51">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Merging">Merging<a class="anchor-link" href="#Merging">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c15f411-2990-4f31-98b6-1fe8e55817cb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Example:-Name-categories">Example: Name categories<a class="anchor-link" href="#Example:-Name-categories">¶</a></h3><p>The <a href="https://archive.is/NpORG">New York Times article from Lecture 1</a> claims that certain categories of names are becoming more popular. For example:</p>
-<ul>
-<li><p>Forbidden names like Lucifer, Lilith, Kali, and Danger.</p>
-</li>
-<li><p>Evangelical names like Amen, Savior, Canaan, and Creed.</p>
-</li>
-<li><p>Mythological names.</p>
-</li>
-<li><p>It also claims that baby boomer names are becoming less popular.</p>
-</li>
-</ul>
-<p>Let's see if we can verify these claims using data!</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4960d5ec-d3b5-4ae2-bb5c-b822334e7cb9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Loading-in-the-data">Loading in the data<a class="anchor-link" href="#Loading-in-the-data">¶</a></h3><p>Our first DataFrame, <code>baby</code>, is the same as we saw in Lecture 1. It has one row for every combination of <code>'Name'</code>, <code>'Sex'</code>, and <code>'Year'</code>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e05bad6f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">baby_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'data'</span><span class="p">)</span> <span class="o">/</span> <span class="s1">'baby.csv'</span>
-<span class="n">baby</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">baby_path</span><span class="p">)</span>
-<span class="n">baby</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=02253dcc-b6f5-4ada-8e49-bc5096257eb3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Our second DataFrame, <code>nyt</code>, contains the New York Times' categorization of each of several names, based on the aforementioned article.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f60eca7e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">nyt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'data'</span><span class="p">)</span> <span class="o">/</span> <span class="s1">'nyt_names.csv'</span>
-<span class="n">nyt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">nyt_path</span><span class="p">)</span>
-<span class="n">nyt</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=81491519-cf2c-486f-9b82-8898bd73549a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Issue</strong>: To find the number of babies born with (for example) forbidden names each year, we need to combine information from both <code>baby</code> and <code>nyt</code>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2e305183-0ee5-4652-8c9d-cbf78acaf459">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Merging">Merging<a class="anchor-link" href="#Merging">¶</a></h3><ul>
-<li>We want to link rows from <code>baby</code> and <code>nyt</code> together whenever the names match up.</li>
-<li>This is a <strong>merge</strong> (<code>pandas</code> term), i.e. a <strong>join</strong> (SQL term).</li>
-<li>A merge is appropriate when we have two sources of information <strong>about the same individuals</strong> that is <strong>linked by a common column(s)</strong>.</li>
-<li>The common column(s) are called the <strong>join key</strong>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=45a41c8c-7c46-4396-837c-f6170814af17">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Example-merge">Example merge<a class="anchor-link" href="#Example-merge">¶</a></h3><p>Let's demonstrate on a small subset of <code>baby</code> and <code>nyt</code>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=abff9e98">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">nyt_small</span> <span class="o">=</span> <span class="n">nyt</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">names_to_keep</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Julius'</span><span class="p">,</span> <span class="s1">'Karen'</span><span class="p">,</span> <span class="s1">'Noah'</span><span class="p">]</span>
-<span class="n">baby_small</span> <span class="o">=</span> <span class="p">(</span><span class="n">baby</span>
- <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"Year == 2020 and Name in @names_to_keep"</span><span class="p">)</span>
- <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="p">)</span>
-
-<span class="n">dfs_side_by_side</span><span class="p">(</span><span class="n">baby_small</span><span class="p">,</span> <span class="n">nyt_small</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=21686fc2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">pt</span>
-baby_small.merge(nyt_small, left_on='Name', right_on='nyt_name')
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=09619930-ac5b-43c9-aac5-22210322b1d7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="The-merge-method">The <code>merge</code> method<a class="anchor-link" href="#The-merge-method">¶</a></h3><ul>
-<li><p>The <code>merge</code> DataFrame method joins two DataFrames by columns or indexes.</p>
-<ul>
-<li>As mentioned before, "merge" is just the <code>pandas</code> word for "join."</li>
-</ul>
-</li>
-<li><p>When using the <code>merge</code> method, the DataFrame before <code>merge</code> is the "left" DataFrame, and the DataFrame passed into <code>merge</code> is the "right" DataFrame.</p>
-<ul>
-<li>In <code>baby_small.merge(nyt_small)</code>, <code>baby_small</code> is considered the "left" DataFrame and <code>nyt_small</code> is the "right" DataFrame; the columns from the left DataFrame appear to the left of the columns from right DataFrame.</li>
-</ul>
-</li>
-<li><p>By default:</p>
-<ul>
-<li>If join keys are not specified, all shared columns between the two DataFrames are used.</li>
-<li>The "type" of join performed is an inner join. <strong>This is the only type of join you saw in DSC 10, but there are more, as we'll now see!</strong></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5cbae422-fb53-4cbf-ac74-01c30341d365">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Join-types:-inner-joins">Join types: inner joins<a class="anchor-link" href="#Join-types:-inner-joins">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2206e6f8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">pt</span>
-baby_small.merge(nyt_small, left_on='Name', right_on='nyt_name')
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=de8102e1-5c5e-48ac-9f89-1b63768eb6e3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li>Note that <code>'Noah'</code> and <code>'Freya'</code> do not appear in the merged DataFrame.</li>
-<li>This is because there is:<ul>
-<li>no <code>'Noah'</code> in the right DataFrame (<code>nyt_small</code>), and</li>
-<li>no <code>'Freya'</code> in the left DataFrame (<code>baby_small</code>).</li>
-</ul>
-</li>
-<li>The default type of join that <code>merge</code> performs is an <strong>inner join</strong>, which keeps the <strong>intersection</strong> of the join keys.</li>
-</ul>
-<center><img alt="No description has been provided for this image" src="imgs/image_0.png" width="20%"/></center>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7e488388-db87-4899-b0c1-5c9507fdeaee">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Different-join-types">Different join types<a class="anchor-link" href="#Different-join-types">¶</a></h3><p>We can change the type of join performed by changing the <code>how</code> argument in <code>merge</code>. Let's experiment!</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5edc6919">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">pt</span>
-# Note the NaNs!
-baby_small.merge(nyt_small, left_on='Name', right_on='nyt_name', how='left')
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=00f81ba5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">pt</span>
-baby_small.merge(nyt_small, left_on='Name', right_on='nyt_name', how='right')
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7b7e30fa">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">pt</span>
-baby_small.merge(nyt_small, left_on='Name', right_on='nyt_name', how='outer')
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2956b278-d404-4fc8-bb04-c0d026825860">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Different-join-types-handle-mismatches-differently">Different join types handle mismatches differently<a class="anchor-link" href="#Different-join-types-handle-mismatches-differently">¶</a></h3><p>There are four types of joins.</p>
-<ul>
-<li><strong>Inner</strong>: keep <strong>only</strong> matching keys (intersection).</li>
-<li><strong>Outer</strong>: keep <strong>all</strong> keys in both DataFrames (union).</li>
-<li><strong>Left</strong>: keep all keys in the left DataFrame, whether or not they are in the right DataFrame.</li>
-<li><strong>Right</strong>: keep all keys in the right DataFrame, whether or not they are in the left DataFrame.<ul>
-<li>Note that <code>a.merge(b, how='left')</code> contains the same information as <code>b.merge(a, how='right')</code>, just in a different order.</li>
-</ul>
-</li>
-</ul>
-<center><img alt="No description has been provided for this image" src="imgs/image_1.png" width="30%"/></center>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3162c948-1ba7-434d-b5dd-6c38fe210a40">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Notes-on-the-merge-method">Notes on the <code>merge</code> method<a class="anchor-link" href="#Notes-on-the-merge-method">¶</a></h3><ul>
-<li><code>merge</code> is flexible – you can merge using a combination of columns, or the index of the DataFrame.</li>
-<li>If the two DataFrames have the same column names, <code>pandas</code> will add <code>_x</code> and <code>_y</code> to the duplicated column names to avoid having columns with the same name (change these the <code>suffixes</code> argument).</li>
-<li>There is, in fact, a <code>join</code> method, but it's actually a wrapper around <code>merge</code> with fewer options.</li>
-<li><strong>As always, the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html">documentation</a> is your friend!</strong></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8e064ab2-ff79-47d0-9568-877081b9ec11">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Lots-of-pandas-operations-do-an-implicit-outer-join!">Lots of <code>pandas</code> operations do an implicit outer join!<a class="anchor-link" href="#Lots-of-pandas-operations-do-an-implicit-outer-join!">¶</a></h3><ul>
-<li><code>pandas</code> will almost always try to match up index values using an outer join.</li>
-<li>It won't tell you that it's doing an outer join, it'll just throw <code>NaN</code>s in your result!</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c823f754">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'a'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'hello'</span><span class="p">,</span> <span class="s1">'dsc80'</span><span class="p">,</span> <span class="s1">'students'</span><span class="p">])</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'b'</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'dsc80'</span><span class="p">,</span> <span class="s1">'is'</span><span class="p">,</span> <span class="s1">'awesome'</span><span class="p">])</span>
-<span class="n">dfs_side_by_side</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2cd8c3c5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">df1</span><span class="p">[</span><span class="s1">'a'</span><span class="p">]</span> <span class="o">+</span> <span class="n">df2</span><span class="p">[</span><span class="s1">'b'</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=72e30f50-3f62-4e90-ae51-fe351884f208">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Many-to-one-&amp;-many-to-many-joins">Many-to-one &amp; many-to-many joins<a class="anchor-link" href="#Many-to-one-&amp;-many-to-many-joins">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c6e93bdc-c79c-4ea3-9210-ad993593d486">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="One-to-one-joins">One-to-one joins<a class="anchor-link" href="#One-to-one-joins">¶</a></h3><ul>
-<li>So far in this lecture, the joins we have worked with are called <strong>one-to-one</strong> joins.</li>
-<li>Neither the left DataFrame (<code>baby_small</code>) nor the right DataFrame (<code>nyt_small</code>) contained any duplicates in the join key.</li>
-<li>What if there are duplicated join keys, in one or both of the DataFrames we are merging?</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=38e5378a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Run this cell to set up the next example.</span>
-<span class="n">profs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-<span class="p">[[</span><span class="s1">'Sam'</span><span class="p">,</span> <span class="s1">'UCB'</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
- <span class="p">[</span><span class="s1">'Sam'</span><span class="p">,</span> <span class="s1">'UCSD'</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
- <span class="p">[</span><span class="s1">'Janine'</span><span class="p">,</span> <span class="s1">'UCSD'</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
- <span class="p">[</span><span class="s1">'Marina'</span><span class="p">,</span> <span class="s1">'UIC'</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
- <span class="p">[</span><span class="s1">'Justin'</span><span class="p">,</span> <span class="s1">'OSU'</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
- <span class="p">[</span><span class="s1">'Soohyun'</span><span class="p">,</span> <span class="s1">'UCSD'</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
- <span class="p">[</span><span class="s1">'Suraj'</span><span class="p">,</span> <span class="s1">'UCB'</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span>
-    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">,</span> <span class="s1">'School'</span><span class="p">,</span> <span class="s1">'Years'</span><span class="p">]</span>
-<span class="p">)</span>
-
-<span class="n">schools</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">'Abr'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'UCSD'</span><span class="p">,</span> <span class="s1">'UCLA'</span><span class="p">,</span> <span class="s1">'UCB'</span><span class="p">,</span> <span class="s1">'UIC'</span><span class="p">],</span>
-    <span class="s1">'Full'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'University of California San Diego'</span><span class="p">,</span> <span class="s1">'University of California, Los Angeles'</span><span class="p">,</span> <span class="s1">'University of California, Berkeley'</span><span class="p">,</span> <span class="s1">'University of Illinois Chicago'</span><span class="p">]</span>
-<span class="p">})</span>
-
-<span class="n">programs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">'uni'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'UCSD'</span><span class="p">,</span> <span class="s1">'UCSD'</span><span class="p">,</span> <span class="s1">'UCSD'</span><span class="p">,</span> <span class="s1">'UCB'</span><span class="p">,</span> <span class="s1">'OSU'</span><span class="p">,</span> <span class="s1">'OSU'</span><span class="p">],</span>
-    <span class="s1">'dept'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Math'</span><span class="p">,</span> <span class="s1">'HDSI'</span><span class="p">,</span> <span class="s1">'COGS'</span><span class="p">,</span> <span class="s1">'CS'</span><span class="p">,</span> <span class="s1">'Math'</span><span class="p">,</span> <span class="s1">'CS'</span><span class="p">],</span>
-    <span class="s1">'grad_students'</span><span class="p">:</span> <span class="p">[</span><span class="mi">205</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">281</span><span class="p">,</span> <span class="mi">439</span><span class="p">,</span> <span class="mi">304</span><span class="p">,</span> <span class="mi">193</span><span class="p">]</span>
-<span class="p">})</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5412c15-7734-402b-8b41-dfd41655f219">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Many-to-one-joins">Many-to-one joins<a class="anchor-link" href="#Many-to-one-joins">¶</a></h3><ul>
-<li>Many-to-one joins are joins where <strong>one</strong> of the DataFrames contains duplicate values in the join key.</li>
-<li>The resulting DataFrame will preserve those duplicate entries as appropriate.</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e7e7d4ab">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfs_side_by_side</span><span class="p">(</span><span class="n">profs</span><span class="p">,</span> <span class="n">schools</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1314f5d3-269e-4554-a3f8-3e928748c539">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Note that when merging <code>profs</code> and <code>schools</code>, the information from <code>schools</code> is duplicated.</p>
-<ul>
-<li><code>'University of California, San Diego'</code> appears three times.</li>
-<li><code>'University of California, Berkeley'</code> appears twice.</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=23a18661">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">pt</span>
-profs.merge(schools, left_on='School', right_on='Abr', how='left')
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=afaac39e-b3c9-4aeb-a876-502548543400">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Many-to-many-joins">Many-to-many joins<a class="anchor-link" href="#Many-to-many-joins">¶</a></h3><p>Many-to-many joins are joins where both DataFrames have duplicate values in the join key.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3942476b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfs_side_by_side</span><span class="p">(</span><span class="n">profs</span><span class="p">,</span> <span class="n">programs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6bca337e-03f3-4775-9ea9-2f811e8cf7bb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Before running the following cell, try predicting the number of rows in the output.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=aa4fb512">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">pt</span>
-profs.merge(programs, left_on='School', right_on='uni')
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f0396291-22b2-4722-b345-88dc35b2d2ad">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li><code>merge</code> stitched together every UCSD row in <code>profs</code> with every UCSD row in <code>programs</code>.</li>
-<li>Since there were 3 UCSD rows in <code>profs</code> and 3 in <code>programs</code>, there are $3 \cdot 3 = 9$ UCSD rows in the output. The same applies for all other schools.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a1d089d9-e14e-4071-a838-8265b2392042">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div class="alert alert-warning">
-<h3>Question 🤔 (Answer at <a href="https://dsc80.com/q">dsc80.com/q</a>)</h3>
-<p>Code: <code>merge</code></p>
-</div>
-<p>Fill in the blank so that the last statement evaluates to <code>True</code>.</p>
-<div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">profs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">programs</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">'School'</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">'uni'</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="n">____</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-<p><strong>Don't</strong> use <code>merge</code> (or <code>join</code>) in your solution!</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ee0c1851">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfs_side_by_side</span><span class="p">(</span><span class="n">profs</span><span class="p">,</span> <span class="n">programs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=56f90816">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Your code goes here.</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3a4f507d-3c14-4fc7-bed3-acdb0d339c67">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Returning-back-to-our-original-question">Returning back to our original question<a class="anchor-link" href="#Returning-back-to-our-original-question">¶</a></h3><p>Let's find the popularity of baby name categories over time. To start, we'll define a DataFrame that has one row for every combination of <code>'category'</code> and <code>'Year'</code>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=df991fd7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">cate_counts</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">baby</span>
-    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nyt</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">'Name'</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">'nyt_name'</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'category'</span><span class="p">,</span> <span class="s1">'Year'</span><span class="p">])</span>
-    <span class="p">[</span><span class="s1">'Count'</span><span class="p">]</span>
-    <span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="p">)</span>
-<span class="n">cate_counts</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=03159ce1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># We'll talk about plotting code soon!</span>
-<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">cate_counts</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Count'</span><span class="p">,</span>
-              <span class="n">facet_col</span><span class="o">=</span><span class="s1">'category'</span><span class="p">,</span> <span class="n">facet_col_wrap</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-              <span class="n">facet_row_spacing</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
-              <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">matches</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">showticklabels</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fdd66502-c203-452d-8214-d6f5d5ecc5c8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div class="alert alert-info">
-<h3>Questions? 🤔</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=73600922-be8b-436e-86e3-5f7ce31c83d3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Transforming">Transforming<a class="anchor-link" href="#Transforming">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c00a2f58-0405-495e-b4d8-3477797436c3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Transforming-values">Transforming values<a class="anchor-link" href="#Transforming-values">¶</a></h3><ul>
-<li><p>A <strong>transformation</strong> results from performing some operation on every element in a sequence, e.g. a Series.</p>
-</li>
-<li><p>While we haven't discussed it yet in DSC 80, you learned how to transform Series in DSC 10, using the <code>apply</code> method. <code>apply</code> is very flexible – it takes in a function, which itself takes in a single value as input and returns a single value.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8c368e07">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">baby</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=963201ff">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">number_of_vowels</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">c</span> <span class="ow">in</span> <span class="s1">'aeiou'</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
-
-<span class="n">baby</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">number_of_vowels</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d8a89fed">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Built-in functions work with apply, too.</span>
-<span class="n">baby</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=297c0274-1bbb-49e2-acff-ab8b28ae17b6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="The-price-of-apply">The price of <code>apply</code><a class="anchor-link" href="#The-price-of-apply">¶</a></h3><p>Unfortunately, <code>apply</code> runs really slowly!</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=995da2be">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it
-<span class="n">baby</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">number_of_vowels</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f698c9b0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it
-<span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">baby</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]:</span>
-    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number_of_vowels</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2583ec8d-d5cf-40b9-9d56-396aa74b0d27">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Internally, <code>apply</code> actually just runs a <code>for</code>-loop!</strong></p>
-<p><strong>So, when possible – say, when applying arithmetic operations – we should work on Series objects directly and avoid <code>apply</code>!</strong></p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6cc2c205-54a7-4f31-b8ce-65a32700212c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="The-price-of-apply">The price of <code>apply</code><a class="anchor-link" href="#The-price-of-apply">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=43ec65ed">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it
-<span class="n">baby</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span> <span class="c1"># Rounds down to the nearest multiple of 10.</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=610c3a09">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it
-<span class="n">baby</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf5731fd-15b1-4442-b3d5-8dc41be7b69d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>100x slower!</strong></p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7bb06e77-68b8-4e6d-9faa-8f7e70148846">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="The-.str-accessor">The <code>.str</code> accessor<a class="anchor-link" href="#The-.str-accessor">¶</a></h3><p>For string operations, <code>pandas</code> provides a convenient <code>.str</code> accessor.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6d5ee7d9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it
-<span class="n">baby</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4d4b803b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it
-<span class="n">baby</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=83e0a445-38e0-4f0c-a306-b4a83d283535">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>It's very convenient and <strong>runs about the same speed as <code>apply</code>!</strong></p>
+<h1 id="Lecture-5-%E2%80%93-Exploratory-Data-Analysis-and-Data-Cleaning">Lecture 5 – Exploratory Data Analysis and Data Cleaning<a class="anchor-link" href="#Lecture-5-%E2%80%93-Exploratory-Data-Analysis-and-Data-Cleaning">¶</a></h1>
 </div>
 </div>
 </div>
@@ -8615,8 +7651,7 @@ profs.merge(programs, left_on='School', right_on='uni')
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="alert alert-warning">
-<h3>Question 🤔 (Answer at <a href="https://dsc80.com/q">dsc80.com/q</a>)</h3>
-<p>Code: <code>dfs</code></p>
+<h3>Question 🤔 </h3>
 </div>
 <p>The first article said that one third of restaurants had at least one major safety violation.<br/>
 Which DataFrames and columns seem most useful to verify this?</p>
@@ -8737,7 +7772,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>We've used <code>plotly</code> in lecture briefly, and you even have to use it in Project 1 Question 13, but we haven't yet discussed it formally.</li>
+<li>We've used <code>plotly</code> in lecture briefly but we haven't yet discussed it formally.</li>
 </ul>
 </div>
 </div>
@@ -8792,10 +7827,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>By setting <code>pandas</code> plotting backend to <code>'plotly'</code> (by default, it's <code>'matplotlib'</code>) and using the DataFrame <code>plot</code> method.<ul>
-<li>The DataFrame <code>plot</code> method is how you created plots in DSC 10!</li>
-</ul>
-</li>
+<li>By setting <code>pandas</code> plotting backend to <code>'plotly'</code> (by default, it's <code>'matplotlib'</code>) and using the DataFrame <code>plot</code> method.</li>
 </ul>
 </div>
 </div>
@@ -8965,8 +7997,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="alert alert-warning">
-<h3>Question 🤔 (Answer at <a href="https://dsc80.com/q">dsc80.com/q</a>)</h3>
-<p>Code: <code>types</code></p>
+<h3>Question 🤔 </h3>
 </div>
 <p>Determine the <strong>feature type</strong> of each of the following variables.</p>
 <ul>
@@ -9372,7 +8403,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">subset_rest</span><span class="p">(</span><span class="n">rest</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">subset_rest</span><span class="p">(</span><span class="n">rest</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">rest</span><span class="p">[[</span><span class="s1">'business_id'</span><span class="p">,</span> <span class="s1">'name'</span><span class="p">,</span> <span class="s1">'address'</span><span class="p">,</span> <span class="s1">'zip'</span><span class="p">,</span> <span class="s1">'opened_date'</span><span class="p">]]</span>
 
 <span class="n">rest</span> <span class="o">=</span> <span class="p">(</span>
@@ -9419,7 +8450,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">subset_insp</span><span class="p">(</span><span class="n">insp</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">subset_insp</span><span class="p">(</span><span class="n">insp</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span>
         <span class="n">insp</span><span class="p">[[</span><span class="s1">'business_id'</span><span class="p">,</span> <span class="s1">'inspection_id'</span><span class="p">,</span> <span class="s1">'score'</span><span class="p">,</span> <span class="s1">'grade'</span><span class="p">,</span> <span class="s1">'completed_date'</span><span class="p">,</span> <span class="s1">'status'</span><span class="p">]]</span>
         <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'completed_date'</span><span class="p">:</span> <span class="s1">'date'</span><span class="p">})</span>
@@ -9442,7 +8473,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">subset_viol</span><span class="p">(</span><span class="n">viol</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">subset_viol</span><span class="p">(</span><span class="n">viol</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span>
         <span class="n">viol</span><span class="p">[[</span><span class="s1">'inspection_id'</span><span class="p">,</span> <span class="s1">'violation'</span><span class="p">,</span> <span class="s1">'major_violation'</span><span class="p">,</span> <span class="s1">'violation_accela'</span><span class="p">]]</span>
         <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'violation'</span><span class="p">:</span> <span class="s1">'kind'</span><span class="p">,</span>
@@ -9478,7 +8509,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">merge_all_restaurant_data</span><span class="p">():</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">merge_all_restaurant_data</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">(</span>
         <span class="n">rest</span>
         <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">insp</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'business_id'</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
@@ -9500,8 +8531,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="alert alert-warning">
-<h3>Question 🤔 (Answer at <a href="https://dsc80.com/q">dsc80.com/q</a>)</h3>
-<p>Code: <code>lefts</code></p>
+<h3>Question 🤔 </h3>
 </div>
 <p>Why should the function above use two left joins? What would go wrong if we used other kinds of joins?</p>
 </div>
@@ -9672,7 +8702,7 @@ Which DataFrames and columns seem most useful to verify this?</p>
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Another advantage of defining functions is that we can reuse this function</span>
 <span class="c1"># for the 'opened_date' column in `rest` if we wanted to.</span>
-<span class="k">def</span> <span class="nf">parse_dates</span><span class="p">(</span><span class="n">insp</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_dates</span><span class="p">(</span><span class="n">insp</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
     <span class="n">date_format</span> <span class="o">=</span> <span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span>
     <span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">insp</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_format</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">insp</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="n">dates</span><span class="p">})</span>
@@ -9952,21 +8982,6 @@ Which DataFrames and columns seem most useful to verify this?</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=67478028">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div class="alert alert-warning">
-<h3>Question 🤔 (Answer at <a href="https://dsc80.com/q">dsc80.com/q</a>)</h3>
-<p>Code: <code>qs</code></p>
-</div>
-<p>What questions do you want me to try and answer with the data? I'll start with a single pre-prepared question, and then answer student questions until we run out of time.</p>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=76b53b97">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9992,17 +9007,6 @@ Which DataFrames and columns seem most useful to verify this?</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=170d5d0c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Summary,-next-time">Summary, next time<a class="anchor-link" href="#Summary,-next-time">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=02dd620d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10019,17 +9023,6 @@ Which DataFrames and columns seem most useful to verify this?</p>
 </li>
 <li>Approach EDA with an open mind, and draw lots of visualizations.</li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d8419fc7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Next-time">Next time<a class="anchor-link" href="#Next-time">¶</a></h3><p>Hypothesis and permutation testing. Some of this will be DSC 10 review, but we'll also push further!</p>
 </div>
 </div>
 </div>
