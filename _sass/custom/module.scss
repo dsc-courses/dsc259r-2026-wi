@@ -121,3 +121,17 @@
 .text-grey-dk-100, .label-lecture {
     color: #5c5962 !important;
 }
+
+.lectures-list {
+  grid-template-columns: 1fr !important;
+
+  .module-event {
+    grid-column-start: 1;
+    padding-top: $sp-3;
+    padding-bottom: $sp-3;
+
+    + .module-event {
+      padding-top: $sp-3;
+    }
+  }
+}

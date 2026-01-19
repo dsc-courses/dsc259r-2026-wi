@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="module">
+  <h3 class="module-header" id="lectures">Lectures</h3>
+  <dl class="module-days lectures-list">
+    {% assign sorted_modules = site.modules | sort: "weekNumber" %}
+    {% for module in sorted_modules %}
+      {% if module.days %}
+        {% for day in module.days %}
+          {% for event in day.events %}
+            {% if event.type == "lecture" %}
+              <dd class="module-event main">
+                <p class="module-event-type">
+                  <strong class="label label-{{ event.type }}">
+                    {{ event.name }}
+                  </strong>
+                </p>
+                <div class="module-event-content">
+                  <p class="module-event-content--title">
+                  {% if event.url %}
+                    <a href="{{ event.url }}">{{ event.title }}</a>
+                  {% else %}
+                    {{ event.title }}
+                  {% endif %}
+                  </p>
+
+                  <div class="module-event-content--links">
+                    {%- if event.blank -%}
+                    <small><a href="{{ event.blank }}"><button type="button" class="btn btn-info">🌗 blank</button></a></small>
+                    {%- endif -%}
+
+                    {%- if event.filled -%}
+                    <small><a href="{{ event.filled }}"><button type="button" class="btn btn-info">📝 filled</button></a></small>
+                    {%- endif -%}
+
+                    {%- if event.podcast -%}
+                    <small><a href="{{ event.podcast }}"><button type="button" class="btn btn-info">🎥 podcast</button></a></small>
+                    {%- endif -%}
+                  </div>
+                </div>
+                <p class="module-event-readings">
+                  {%- if event.podcast -%}
+                    <span>
+                      <a href="{{ event.podcast }}">🎥</a>
+                    </span>
+                  {%- endif -%}
+                  {%- if event.podcast and event.reading -%}
+                    <span> | </span>
+                  {%- endif -%}
+                  {%- if event.reading -%}
+                    {{ event.reading | markdownify | remove: '<p>' | remove: '</p>' }}
+                  {%- endif -%}
+                </p>
+              </dd>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </dl>
+</div>

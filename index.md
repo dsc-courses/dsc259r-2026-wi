@@ -35,6 +35,3 @@ nav_order: 1
 <!-- {: .green }
 **Welcome to DSC 80! 👋 Make sure to: read the [syllabus][syllabus], check that you can access [Gradescope][gradescope] and [Ed][ed], fill out the [Welcome Survey][welcome-survey], and fill out the [Exam Accommodations Form][exam-accommodations] if you have an exam conflict.** -->
 
-{% for module in site.modules %}
-{{ module }}
-{% endfor %}
