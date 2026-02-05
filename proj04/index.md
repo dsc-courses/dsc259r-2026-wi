@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "Final Project: The Data Science Lifecycle 📊"
+title: "📊 Final Project"
 description: Description of Final Project.
-nav_exclude: true
+nav_exclude: false
+nav_order: 7
 ---
 
 <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
